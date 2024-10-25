@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 11",
+    "price": "1000000",
+    "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-trang-600x600.jpg",
+    "category_id": 1
+  },
+  {
+    "id": 1,
+    "name": "iPhone 11",
+    "price": "1000000",
+    "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-trang-600x600.jpg",
+    "category_id": 1
+  },
+  {
+    "id": 1,
+    "name": "iPhone 11",
+    "price": "1000000",
+    "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-trang-600x600.jpg",
+    "category_id": 1
+  },
+  {
+    "id": 1,
+    "name": "iPhone 11 fake",
+    "price": "1000000",
+    "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-trang-600x600.jpg",
+    "category_id": 1
+  }
+]
