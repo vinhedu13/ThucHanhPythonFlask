@@ -1,0 +1,17 @@
+{% extends "layout/base.html" %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-12">
+            <img src="{{data.image}}" class="img-fluid"/>
+        </div>
+
+        <div class="col-md-7 col-12">
+            <h1 class="text-danger">{{data.name}}</h1>
+            <h1 class="text-info">{{data.price}}</h1>
+        </div>
+    </div>
+</div>
+{% endblock %}
