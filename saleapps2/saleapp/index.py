@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, url_for
 import dao
-from saleapp import app
+from saleapps2.saleapp import app
 
 
 @app.context_processor
