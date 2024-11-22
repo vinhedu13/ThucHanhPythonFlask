@@ -1,6 +1,8 @@
+import math
+
 from flask import render_template, request, redirect, url_for
 import dao
-from saleapps2.saleapp import app
+from saleapp import app
 
 
 @app.context_processor
@@ -15,8 +17,10 @@ def index():
     categories = dao.load_categories()
     q = request.args.get("q")
     cate_id = request.args.get("category_id")
-    products = dao.load_products(q, cate_id)
-    return render_template("index.html", products=products)
+    page = request.args.get("page")
+    products = dao.load_products(q, cate_id, page)
+    pages = dao.count_product()
+    return render_template("index.html", products=products, pages = math.ceil(pages/app.config['PAGE_SIZE']))
 
 
 @app.route("/products/<int:id>")
