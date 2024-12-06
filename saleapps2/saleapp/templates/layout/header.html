@@ -5,18 +5,31 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
             <ul class="navbar-nav me-auto">
+                <a class="nav-link active" href="#">Trang chủ</a>
+                {% for c in categories%}
                 <li class="nav-item">
-                    <a class="nav-link active" href="/">Trang chủ</a>
-                </li>
-                {%for c in categories%}
-                <li class="nav-item">
-                    <a class="nav-link" href="?category_id={{c.id}}">{{c.name}}</a>
+                    <a class="nav-link" href="/?category_id={{c.id}}">{{c.name}}</a>
                 </li>
                 {%endfor%}
+
+                {% if current_user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="/login">Đăng Nhập</a>
+                    <a class="nav-link text-info" href="/">Chao {{current_user.name}} </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="/logout">&#128110; Đăng Xuat</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="/login">&#128110; Đăng nhập</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="/register">&#128110; Đăng Ky</a>
+                </li>
+                {% endif %}
+
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" name="q" type="text" placeholder="Nhập từ khóa...">
